@@ -6,8 +6,7 @@ import lombok.Data;
 public abstract class Customer {
 	private String id;	
 	private String name;	
-	public abstract void provideService();
-	public abstract void requirementAnalysis();
-	public abstract void valueAnalysis();
+	
+	public abstract void accept(Visitor visitor);
 }
 

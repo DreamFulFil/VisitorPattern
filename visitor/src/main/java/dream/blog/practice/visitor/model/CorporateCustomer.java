@@ -9,16 +9,11 @@ public class CorporateCustomer extends Customer{
 	private String phone;
 	private String companyAddress;
 	@Override
-	public void provideService() {
-		System.err.println("Provide service for corporate customers");
+	public void accept(Visitor visitor) {
+		visitor.visitCorporate(this);
 	}
-	@Override
-	public void requirementAnalysis() {
-		System.err.println("Analyzing requirements for corporate customer!");
-	}
-	@Override
-	public void valueAnalysis() {
-		System.err.println("Analyzing values for corporate customer!");
+	public void someFunction1() {
+		//企業戶自己的功能
 	}
 }
 
